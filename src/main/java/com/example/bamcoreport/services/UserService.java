@@ -35,5 +35,17 @@ public class UserService implements IUserService {
     public void postUser(User user) {
         userRepository.save(user);
     }
+
+    @Override
+    public void deleteUser(Long userId) {
+        boolean exists =  userRepository.existsById(userId);
+
+        if (!exists) {
+            log.error("user not found");
+            throw new IllegalStateException("user not found");
+        }
+
+        userRepository.deleteById(userId);
+    }
 }
 

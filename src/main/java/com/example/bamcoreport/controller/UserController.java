@@ -34,4 +34,10 @@ public class UserController {
         userService.postUser(user);
     }
 
+    @DeleteMapping(path = "{userId}")
+    public void deleteUser(@PathVariable("userId") Long userId){
+        log.warn("user deleted");
+        userService.deleteUser(userId);
+    }
+
 }
