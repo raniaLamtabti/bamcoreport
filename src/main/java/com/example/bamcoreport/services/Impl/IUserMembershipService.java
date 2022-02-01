@@ -9,5 +9,5 @@ public interface IUserMembershipService {
 
     List<UserMembershipDto> getUserMemberships();
     void postUserMembership(UserMembership userMembership);
-    void deleteUserMembership(Long userId);
+    void deleteUserMembership(Long userMembershipId);
 }

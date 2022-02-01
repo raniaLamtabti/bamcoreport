@@ -9,4 +9,5 @@ import java.util.List;
 public interface IProfileService {
     List<ProfileDto> getProfiles();
     void postProfile(Profile profile);
+    void deleteProfile(Long profileId);
 }

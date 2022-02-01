@@ -9,4 +9,5 @@ public interface IUserContactInfoService {
 
     List<UserContactInfoDto> getUsersContactInfo();
     void postUserContactInfo(UserContactInfo userContactInfo);
+    void deleteUserContactInfo(Long userContactInfoId);
 }

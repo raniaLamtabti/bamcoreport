@@ -8,4 +8,5 @@ import java.util.List;
 public interface IProfileMemberService {
     List<ProfileMemberDto> getProfileMembers();
     void postProfileMember(ProfileMember profileMember);
+    void deleteProfileMember(Long profileMemberId);
 }

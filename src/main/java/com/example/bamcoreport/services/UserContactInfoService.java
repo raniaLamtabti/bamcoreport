@@ -32,4 +32,16 @@ public class UserContactInfoService implements IUserContactInfoService {
     public void postUserContactInfo(UserContactInfo userContactInfo) {
         userContactInfoRepository.save(userContactInfo);
     }
+
+    @Override
+    public void deleteUserContactInfo(Long userContactInfoId) {
+        boolean exists =  userContactInfoRepository.existsById(userContactInfoId);
+
+        if (!exists) {
+            log.error("user not found");
+            throw new IllegalStateException("user not found");
+        }
+
+        userContactInfoRepository.deleteById(userContactInfoId);
+    }
 }

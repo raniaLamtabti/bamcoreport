@@ -32,4 +32,10 @@ public class UserContactInfoController {
         userContactInfoService.postUserContactInfo(userContactInfo);
     }
 
+    @DeleteMapping(path = "{userContactInfoId}")
+    public void deleteUserContactInfo(@PathVariable("userContactInfoId") Long userContactInfoId){
+        log.warn("user contact deleted");
+        userContactInfoService.deleteUserContactInfo(userContactInfoId);
+    }
+
 }

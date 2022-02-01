@@ -8,4 +8,5 @@ import java.util.List;
 public interface IGroupService {
     List<GroupDto> getGroups();
     void postGroup(Group group);
+    void deleteGroup(Long groupId);
 }

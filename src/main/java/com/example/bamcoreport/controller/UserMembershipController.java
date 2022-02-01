@@ -34,7 +34,7 @@ public class UserMembershipController {
 
     @DeleteMapping(path = "{userMembershipId}")
     public void deleteUserMembership(@PathVariable("userMembershipId") Long userMembershipId){
-        log.warn("user deleted");
+        log.warn("user membership deleted");
         userMembershipService.deleteUserMembership(userMembershipId);
     }
 
